@@ -1,0 +1,174 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  line-height: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  height: auto; }
+
+/* Page */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+
+.inner {
+  max-width: 300px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px; }
+
+.object-fit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-position: center top; }
+  .object-fit ~ * {
+    position: relative; }
+  .object-fit-cover {
+    object-fit: cover;
+    height: 100%; }
+  .object-fit-contain {
+    object-fit: contain;
+    height: auto; }
+
+.section-banner a {
+  text-decoration: none; }
+  .section-banner a:hover, .section-banner a:visited, .section-banner a:active, .section-banner a:focus {
+    text-decoration: none; }
+.section-banner#banner {
+  opacity: 0; }
+.section-banner .inner {
+  background: linear-gradient(180deg, #fff 0%, #9ea3ab 75%, #e3e3e3 100%);
+  border: 1px solid #a5a9b0;
+  padding: 30px 0; }
+.section-banner .logo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 74px; }
+  .section-banner .logo img {
+    max-width: 98px;
+    object-fit: contain; }
+.section-banner .title {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #111;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  min-height: 64px; }
+  .section-banner .title span {
+    display: none; }
+    .section-banner .title span:first-child {
+      display: block; }
+.section-banner .price {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; }
+  .section-banner .price span {
+    padding: 4px 20px 6px;
+    background: #f00;
+    border-radius: 3px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #fff;
+    display: none; }
+    .section-banner .price span:first-child {
+      display: block; }
+.section-banner .img {
+  margin-top: -62px; }
+  .section-banner .img img {
+    display: none; }
+    .section-banner .img img:first-child {
+      display: block; }
+.section-banner .button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  min-height: 50px; }
+  .section-banner .button a {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    color: #fff;
+    background: #111;
+    border-radius: 3px;
+    padding: 4px 24px 8px;
+    text-decoration: none;
+    display: none;
+    animation: linkAnimation 3000ms infinite forwards;
+    content: " ";
+    min-width: 188px;
+    position: relative;
+    z-index: 2; }
+    .section-banner .button a:first-child {
+      display: inline-block; }
+    .section-banner .button a:hover, .section-banner .button a:focus {
+      color: #fff !important;
+      background: #f00;
+      box-shadow: 0 0 28px 10px rgba(255, 0, 0, 0.3);
+      text-decoration: none; }
+@-webkit-keyframes linkAnimation {
+  0% {
+    opacity: 1; }
+  50% {
+    background: #f00;
+    box-shadow: 0 0 10px 6px rgba(255, 0, 0, 0.25); }
+  100% {
+    opacity: 1; } }
